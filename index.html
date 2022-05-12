@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    
+<div class="container">
+
+  <nav class="tabs">
+    <div class="tab active" data-id="one">
+      <span class="step-number">Cisco</span>
+      <span class="step-title">Cisco</span>
+    </div>
+    <div class="tab" data-id="two">
+      <span class="step-number">OA</span>
+      <span class="step-title">OneAccess</span>
+    </div>
+    <div class="tab" data-id="three">
+      <span class="step-number">Rad</span>
+      <span class="step-title">Rad</span>
+    </div>
+    <div class="tab" data-id="four">
+      <span class="step-number">Jnp</span>
+      <span class="step-title">Juniper</span>
+    </div> 
+  </nav>    
+
+  <div class="contents">
+
+    <!-- CISCO -->
+    <div class="content active" id="one">
+      <img src="/assets/img/cisco.png" alt="Logo Cisco">
+      <p class="content-text">
+        <!--  -->
+      </p>
+
+      <table class="tab1">
+        <caption>Commandes de dépannage</caption>
+        <thead>
+          <tr>
+            <th>Commande Cisco</th>
+            <th>Signification</th>   
+          </tr>
+        </thead>
+        
+        <tbody>     
+                     
+        <tr>
+          <td>Show version <br/>(sh ver)</td>
+          <td>Connaitre la version de l'ios ou le numéro de série et l'état de la mémoire flash</td>
+        </tr> 
+          
+                
+        <tr>
+          <td>Show ip interface brief<br/>(sh ip int bri)</td>
+          <td>Connaitre l'état des interfaces physiques et aussi virtuelles</td>
+        </tr> 
+          
+                
+        <tr>
+          <td>Show ARP<br>(sh arp)</td>
+          <td>Permet d'afficher la commande des addresse MAC de tous les équipements connecté sur le routeur</td>
+        </tr> 
+          
+                
+        <tr>
+          <td>Clear pppoe all</td>
+          <td>Permet de réinitialiser totalement une session PPP (Quand le RADIUS à été modifié)</td>
+        </tr> 
+          
+          
+        <tr>
+          <td style="font-size: 16px; text-align: left">ip dhcp pool "nom du dhcp"<br>
+            ip address 10.0.1.0 255.255.255.0<br>
+            dns-server 185.176.176.22 185.176.176.2<br>
+            default-routeur 10.0.1.254<br>
+            exit
+            ip dhcp excluded-address 10.0.1.51 10.0.1.254
+          </td>
+          <td>Création d'un DHCP</td>
+        </tr>
+          
+            
+        <tr>
+          <td>interface dialer 1</td>
+          <td>interface virtuelle qui permet de faire monter une session PPP sur le PTS de linkt</td>
+        </tr> 
+          
+        
+        <tr>
+          <td>show ip bgp summary</td>
+          <td>Permet de connaitre l'état du protocole BGP</td>
+        </tr>   
+          
+        <tr>
+          <td>debug ppp packet<br><br>debug ppp auth</td>
+          <td>Permet de voir si il y a du "PADI"/"PADO"<br>
+            Permet de constater si les requêtes PPP émises par le routeur obtiennent une réponse <br>
+          </td>
+        </tr>
+          
+        <tr>
+          <td>snmp-server</td>
+          <td>protocole de monitoring et de supervision des équipemets réseau.<br><br>(superviser les liens via Grafaba.)</td>
+        </tr>
+          
+        <tr>
+          <td>la NAT</td>
+          <td>Permet de translater des réseaux. Elle permet aux réseaux de classes privées (192.168.1.0, 172.16.0.0 ou 10.0.1.0 par exemple) de sortir sur internet via l'ip WAN attribuée au routeur.</td>
+        </tr>
+          
+        <tr>
+          <td>ip access-list standard VTY </td>
+          <td>Configuration de l'ACL "VTY" avec listingg des adresse IP autorisées</td>
+        </tr>
+          
+    
+          
+
+          
+        </tbody>
+      </table>
+      
+      
+      
+      
+      <table class="tab1" style="margin-top: 25px">
+        <caption>Commandes de dépannage
+    </caption>
+        <thead>
+          <tr>
+            <th>Commandes Cisco</th>
+            <th>Signification</th>   
+          </tr>
+        </thead>
+        
+        <tbody>     
+          
+        <tr>
+          <td>show controllers vDSL 0</td>
+          <td>informations générales interfaces ADSL</td>
+        </tr> 
+     
+        <tr>
+          <td>show controllers shDSL 0</td>
+          <td>informations générales interfaces SDSL</td>
+        </tr> 
+        
+          
+        <tr>
+          <td>show log</td>
+          <td>voir les logs du routeur</td>
+        </tr> 
+          
+        <tr>
+          <td>clear arp-cache</td>
+          <td>efface la table arp</td>
+        </tr> 
+          
+          
+        </tbody>
+          
+      </table>
+
+    </div>
+
+    <!-- One Access -->
+    <div class="content" id="two">
+      <img src="/assets/img/OA.png" alt="">
+      <p class="content-text">
+        Les commandes One Access
+      </p>
+    </div>
+
+    <!-- RAD -->
+    <div class="content" id="three">
+      <img src="/assets/img/RAD.jpg" alt="">
+      <p class="content-text">
+        Les commandes RAD
+      </p>
+    </div>
+
+    <!-- JUNIPER -->
+    <div class="content" id="four">
+      <img src="/assets/img/juniper.png" alt="">      
+      <p class="content-text">
+        Les commandes Juniper
+      </p>
+    </div>
+  </div>
+    
+</div>
+
+
+
+
+    <script src="./js/app.js"></script>
+</body>
+</html>
